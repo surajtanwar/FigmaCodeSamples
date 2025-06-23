@@ -1,0 +1,122 @@
+[
+    {
+        "node_id": "3:3",
+        "node_name": "splash",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "3:101",
+        "node_name": "Group 2",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "3:101",
+        "node_name": "Group 2",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "4:45",
+        "node_name": "btn-menu",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "4:45",
+        "node_name": "btn-menu",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "3:42",
+        "node_name": "Rectangle",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "4:278",
+        "node_name": "Prime Rib Roast",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "3:67",
+        "node_name": "Rectangle",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "4:190",
+        "node_name": "icon-steps",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "9:68",
+        "node_name": "Union",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "9:68",
+        "node_name": "Union",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "UNKNOWN",
+        "action_type": "UNKNOWN",
+        "destination_id": null,
+        "destination_name": null
+    }
+]

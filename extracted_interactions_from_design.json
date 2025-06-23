@@ -1,0 +1,98 @@
+[
+    {
+        "node_id": "3:3",
+        "node_name": "splash",
+        "trigger": "AFTER_TIMEOUT",
+        "action_type": "NODE",
+        "destination_id": "3:4",
+        "destination_name": "home"
+    },
+    {
+        "node_id": "4:45",
+        "node_name": "btn-menu",
+        "trigger": "ON_CLICK",
+        "action_type": "NODE",
+        "destination_id": "3:7",
+        "destination_name": "menu"
+    },
+    {
+        "node_id": "4:45",
+        "node_name": "btn-menu",
+        "trigger": "DRAG",
+        "action_type": "NODE",
+        "destination_id": "3:7",
+        "destination_name": "menu"
+    },
+    {
+        "node_id": "3:42",
+        "node_name": "Rectangle",
+        "trigger": "ON_CLICK",
+        "action_type": "NODE",
+        "destination_id": "3:5",
+        "destination_name": "recipe-details"
+    },
+    {
+        "node_id": "4:278",
+        "node_name": "Prime Rib Roast",
+        "trigger": "ON_CLICK",
+        "action_type": "NODE",
+        "destination_id": "3:5",
+        "destination_name": "recipe-details"
+    },
+    {
+        "node_id": "3:67",
+        "node_name": "Rectangle",
+        "trigger": "DRAG",
+        "action_type": "BACK",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "4:190",
+        "node_name": "icon-steps",
+        "trigger": "ON_CLICK",
+        "action_type": "NODE",
+        "destination_id": "3:6",
+        "destination_name": "recipe-details-complete"
+    },
+    {
+        "node_id": "9:68",
+        "node_name": "Union",
+        "trigger": "ON_CLICK",
+        "action_type": "NODE",
+        "destination_id": "3:5",
+        "destination_name": "recipe-details"
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "ON_CLICK",
+        "action_type": "NODE",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "DRAG",
+        "action_type": "NODE",
+        "destination_id": null,
+        "destination_name": null
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "ON_CLICK",
+        "action_type": "NODE",
+        "destination_id": "3:4",
+        "destination_name": "home"
+    },
+    {
+        "node_id": "7:1",
+        "node_name": "btn-menu",
+        "trigger": "ON_HOVER",
+        "action_type": "NODE",
+        "destination_id": "3:4",
+        "destination_name": "home"
+    }
+]
