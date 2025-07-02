@@ -144,3 +144,9 @@ Menu Button State Check, APP, homescreen, CHECK_STATE, btn-menu, IsClickable, tr
 Negative Check Menu Not on Recipe, APP, homescreen, CLICK, Rectangle, NCHECK, menu
 Recipe Content Verification, APP, homescreen, CLICK, Prime Rib Roast, CHECK, Prime Rib Roast, CHECK, recipe-details
 Multiple Recipe Navigation, APP, homescreen, CLICK, Rectangle, CHECK, recipe-details, SWIPE, DOWN, CLICK, Prime Rib Roast, CHECK, recipe-details 
+
+
+
+
+figd_dEd08LrYcHUxY2mt5PZdZgnCwYFOpk9uPsTJK3Pv 
+4JUZlylV7VKqWuIE2IClJd
