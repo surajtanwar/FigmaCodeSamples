@@ -2,97 +2,57 @@
     {
         "node_id": "3:3",
         "node_name": "splash",
-        "trigger": "AFTER_TIMEOUT",
+        "trigger": "ON_CLICK",
         "action_type": "NODE",
         "destination_id": "3:4",
         "destination_name": "home"
     },
     {
         "node_id": "4:45",
-        "node_name": "btn-menu",
+        "node_name": "btn-menu-home",
         "trigger": "ON_CLICK",
         "action_type": "NODE",
         "destination_id": "3:7",
         "destination_name": "menu"
     },
     {
-        "node_id": "4:45",
-        "node_name": "btn-menu",
-        "trigger": "DRAG",
+        "node_id": "2091:122",
+        "node_name": "btn-menu-favorite",
+        "trigger": "ON_CLICK",
         "action_type": "NODE",
         "destination_id": "3:7",
         "destination_name": "menu"
     },
     {
-        "node_id": "3:42",
-        "node_name": "Rectangle",
+        "node_id": "2091:45",
+        "node_name": "btn-menu-saved",
         "trigger": "ON_CLICK",
         "action_type": "NODE",
-        "destination_id": "3:5",
-        "destination_name": "recipe-details"
+        "destination_id": "3:7",
+        "destination_name": "menu"
     },
     {
-        "node_id": "4:278",
-        "node_name": "Prime Rib Roast",
+        "node_id": "2091:202",
+        "node_name": "FAVORITE RECIPES",
         "trigger": "ON_CLICK",
         "action_type": "NODE",
-        "destination_id": "3:5",
-        "destination_name": "recipe-details"
+        "destination_id": "2091:121",
+        "destination_name": "favorite"
     },
     {
-        "node_id": "3:67",
-        "node_name": "Rectangle",
-        "trigger": "DRAG",
-        "action_type": "BACK",
-        "destination_id": null,
-        "destination_name": null
-    },
-    {
-        "node_id": "4:190",
-        "node_name": "icon-steps",
-        "trigger": "ON_CLICK",
-        "action_type": "NODE",
-        "destination_id": "3:6",
-        "destination_name": "recipe-details-complete"
-    },
-    {
-        "node_id": "9:68",
-        "node_name": "Union",
-        "trigger": "ON_CLICK",
-        "action_type": "NODE",
-        "destination_id": "3:5",
-        "destination_name": "recipe-details"
-    },
-    {
-        "node_id": "7:1",
-        "node_name": "btn-menu",
-        "trigger": "ON_CLICK",
-        "action_type": "NODE",
-        "destination_id": null,
-        "destination_name": null
-    },
-    {
-        "node_id": "7:1",
-        "node_name": "btn-menu",
-        "trigger": "DRAG",
-        "action_type": "NODE",
-        "destination_id": null,
-        "destination_name": null
-    },
-    {
-        "node_id": "7:1",
-        "node_name": "btn-menu",
+        "node_id": "2091:200",
+        "node_name": "Popular recipes",
         "trigger": "ON_CLICK",
         "action_type": "NODE",
         "destination_id": "3:4",
         "destination_name": "home"
     },
     {
-        "node_id": "7:1",
-        "node_name": "btn-menu",
-        "trigger": "ON_HOVER",
+        "node_id": "2091:198",
+        "node_name": "saved recipes",
+        "trigger": "ON_CLICK",
         "action_type": "NODE",
-        "destination_id": "3:4",
-        "destination_name": "home"
+        "destination_id": "2091:44",
+        "destination_name": "saved"
     }
 ]

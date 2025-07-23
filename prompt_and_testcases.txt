@@ -167,3 +167,79 @@ https://www.figma.com/design/2k2t7ZfG09nLyjM4viAGHP/designing_states_demo?node-i
 
 
 https://www.figma.com/design/0a5f17vyqWuJIHAuZoPOSp/designing_states--Copy---Copy-?node-id=0-1&m=dev&t=UrHIOjSRVupuGXmF-1
+
+
+
+The uploaded file is figma design data exported using Figma API.Understand this file and write the test cases based on the Figma prototype interactios mentioned in the json data in the file from source to destination.
+If there is no text on screen for particular node please use CLICK_COORDS command
+Test Case Generation Guide:
+The testcases for the program must be written in the testCase.txt file.
+Format of the testcase file:
+1. The first line of the test case file id the SDB target IP on the PC where test is running 
+2. The second line of the testcase file is LOOP, N where N is the number of the iterations for which you want to run the test cases.
+3.The next lines are the actual testcases. Each testcase is a single line containing the input values seperated by commas.
+	- The first value is always the name of the test case which will appear in the result table.
+	- There are 10 types of commands currently supported by the program.
+		1. APP: The command launches an application in the device. It is followed by the name of the application to be launched. For example-  APP, homescreen - will launch the homescreen.
+		2. CLICK: This command taps the elements on the screen using text. It is followed by the text of the element to be clicked. For example- CLICK, OK - will click on the element with text 'OK'.If there are multiple elements with the same text, it will click on the first one found. If multiple elements need to be clicked subsequently, there is no need to type 'CLICK' again.Just porvide the text of the element to be clicked. For Example if we have to click on 'OK' and then 'CANCEL', we can write "CLICK, OK, CANCEL" instead of "CLICK, OK, CLICK, CANCEL". If there is no text on the element(image, icons etc)CLICK_COORDS command should be used.
+		3. CHECK: This command check if text is present on the screen. It is followed by the text to be clicked. For example "CHECK, Finished" will check if the text 'Finished' is present on the screen or not.
+		4. SLEEP: This command make the program wait for a certain amount of time before executing the next command. It is followed by the time on seconds to wait. For Example - 'SLEEP, 5' will make the program wait for 5 seconds before executing the next command.
+		5. SWIPE: This command swipes the screen in the given direciton. It support four directions : UP, DOWN, LEFT and RIGHT. It is followd by the direction to swipe. For example- SWIPE UP.
+		6. CLICK_COORDS: This commands clicks the screen at the given coordinates. It is followed by the x and y coordinates of the point to be clicked.For example - 'CLICK_COORDS, 100, 200' will click on the point (100,200) on the screen.
+		7. CLICK_SCRL:This command find an element on the screen. It takes four parameters: The Xpath of the root element on which the scroll need to be done , the direction where to scroll, The count of scroll to be done untill the element to be found and the text of the element to find. For example -'CLICK_SCRL, root element XPATH, DOWN, 2, Recipe' will scroll down twice the listview element and click on the first element with the text "Recipe" that appears.
+		8. NCHECK: This command checks if a text is NOT present on the screen.
+		9. CHECK_STATE:This command is used to check any property of an element and match with the expected value. It takes 3 parameters: The text or xpath of the element whose properties need to be checked, the name of the property and the expected value.For Example- 'CHECK_STATE, More cycles, IsClickable, true' will check if the 'More cycles' element is clickable.
+		10. IMG_COMPARE: This command compares the current image of an element with the reference image provided. It takes two parameters: The path of the reference image and the name/ xpath of the element to be compared with the image. For Example- 'IMG_COMPARE, ./images/settings.png./com.example.ma.settings./Layer/SettingRoot/Layout' will compare the current image of the settings page with the reference image settings.png.
+
+Example - 
+Test case 1, Click_COORDS, 74, 83, SLEEP 2, CLICK, FAVORITE RECIPES
+
+The test case will appear as 'Test Case 1'in the result table. It will click on coordinate (74,83), then after sleep of 2 sec, it will click on "FAVORITE RECIPES" text
+Note- Do not put any extra whitespace after the keywordin the testcase file. For Example 'CLICK,  Ok' is correct but 'CLICK ,Ok' is incorret.	
+
+Please inmprove this prompt to get the desired result	
+
+
+
+Improved prompt 
+
+The uploaded file is a Figma design JSON exported using the Figma API. Your task is to:
+
+Objective:
+- Parse this JSON file and extract all prototype interactions between frames or components.
+- For each interaction, generate a test case in the required format.
+- The goal is to validate the user flow from source node to destination node using Figma’s prototype definitions.
+
+Test Case Requirements:
+1. File Header:
+- First line: SDB target IP address (e.g., 192.168.1.101)
+- Second line: LOOP, N (where N is the number of iterations, typically 1)
+
+2. Test Case Format (1 line per test case):
+Each test case line should include:
+
+<Test Case Name>, APP, <app_name>, CLICK or CLICK_COORDS, ..., SLEEP, <duration>, CHECK, <expected_text_or_state>
+
+3. Commands Supported:
+Command	Description
+- APP:	Launches an app. Example: APP, homescreen
+- CLICK: Clicks on elements with visible text. Example: CLICK, OK
+- CLICK_COORDS:	Clicks on specific screen coordinates if text is not present.
+- SLEEP: Waits for a few seconds. Example: SLEEP, 2
+- CHECK: Verifies that specific text appears after interaction.
+
+4. Rules:
+- For elements without visible text, use CLICK_COORDS, x, y.
+- For screens navigated via prototype links, verify the destination screen using CHECK.
+- Avoid extra spaces after commands.
+
+Output:
+Generate a file named testCase.txt containing:
+- First line: 192.168.1.101 (sample IP)
+- Second line: LOOP, 1
+- Subsequent lines: One test case per interaction as described above.
+Example Output:
+192.168.1.101
+LOOP, 1
+Splash to Home, APP, homescreen, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, POPULAR RECIPES
+Home to Product, CLICK_COORDS, 75, 86, CHECK, SAVED RECIPES, CLICK, SAVED RECIPES, SLEEP, 1, CHECK, Product Details

@@ -1,0 +1,9 @@
+192.168.1.101
+LOOP, 1
+splash to home, APP, homescreen, CLICK, splash, SLEEP, 2, CHECK, home
+btn-menu-home to menu, APP, homescreen, CLICK, btn-menu-home, SLEEP, 2, CHECK, menu
+btn-menu-favorite to menu, APP, homescreen, CLICK, btn-menu-favorite, SLEEP, 2, CHECK, menu
+btn-menu-saved to menu, APP, homescreen, CLICK, btn-menu-saved, SLEEP, 2, CHECK, menu
+FAVORITE RECIPES to favorite, APP, homescreen, CLICK, FAVORITE RECIPES, SLEEP, 2, CHECK, favorite
+Popular recipes to home, APP, homescreen, CLICK, Popular recipes, SLEEP, 2, CHECK, home
+saved recipes to saved, APP, homescreen, CLICK, saved recipes, SLEEP, 2, CHECK, saved
