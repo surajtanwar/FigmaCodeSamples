@@ -211,18 +211,14 @@ Objective:
 - The goal is to validate the user flow from source node to destination node using Figma’s prototype definitions.
 
 Test Case Requirements:
-1. File Header:
-- First line: SDB target IP address (e.g., 192.168.1.101)
-- Second line: LOOP, N (where N is the number of iterations, typically 1)
 
-2. Test Case Format (1 line per test case):
+1. Test Case Format (1 line per test case):
 Each test case line should include:
 
-<Test Case Name>, APP, <app_name>, CLICK or CLICK_COORDS, ..., SLEEP, <duration>, CHECK, <expected_text_or_state>
+<Test Case Name>, CLICK or CLICK_COORDS, SLEEP, <duration>, CHECK, <expected_text>
 
 3. Commands Supported:
 Command	Description
-- APP:	Launches an app. Example: APP, homescreen
 - CLICK: Clicks on elements with visible text. Example: CLICK, OK
 - CLICK_COORDS:	Clicks on specific screen coordinates if text is not present.
 - SLEEP: Waits for a few seconds. Example: SLEEP, 2
@@ -243,3 +239,48 @@ Example Output:
 LOOP, 1
 Splash to Home, APP, homescreen, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, POPULAR RECIPES
 Home to Product, CLICK_COORDS, 75, 86, CHECK, SAVED RECIPES, CLICK, SAVED RECIPES, SLEEP, 1, CHECK, Product Details
+
+
+
+
+=============================================================================================================
+
+The uploaded file is a Figma design JSON exported using the Figma API. Your task is to:
+
+Objective:
+- Parse this JSON file and extract all prototype interactions between frames or components.
+- For each interaction, generate a test case in the required format.
+- The goal is to validate the user flow from source node to destination node using Figma’s prototype definitions.
+
+Test Case Requirements:
+
+1. Test Case Format (1 line per test case):
+Each test case line should include:
+
+<Test Case Name>, CLICK or CLICK_COORDS, SLEEP, <duration>, CHECK, <expected_text>
+
+3. Commands Supported:
+Command	Description
+- CLICK: Clicks on elements with visible text. Example: CLICK, OK
+- CLICK_COORDS:	Clicks on specific screen coordinates if text is not present.
+- SLEEP: Waits for a few seconds. Example: SLEEP, 2
+- CHECK: Verifies that specific text appears after interaction.
+
+4. Rules:
+- For elements without visible text, use CLICK_COORDS, x, y.
+- The coordinates should be according to the frame of size 1080 X 1920 and top left of the frame is 0,0
+- For screens navigated via prototype links, verify the destination screen using CHECK.
+- Avoid extra spaces after commands.
+- Save all the test cases in a file(like testcases.txt)
+
+========================================================================================================================================
+output :: 
+
+Navigate from splash to home, CLICK_COORDS, 540, 960, SLEEP, 2, CHECK, POPULAR RECIPES
+Open menu from home, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
+Navigate to popular recipes from menu, CLICK, Popular recipes, SLEEP, 2, CHECK, POPULAR RECIPES
+Navigate to saved recipes from menu, CLICK, saved recipes, SLEEP, 2, CHECK, SAVED RECIPES
+Navigate to favorite recipes from menu, CLICK, FAVORITE RECIPES, SLEEP, 2, CHECK, FAVORITE RECIPES
+Open menu from favorite screen, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
+Open menu from saved screen, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
+
