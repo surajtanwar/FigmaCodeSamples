@@ -270,6 +270,7 @@ Command	Description
 - For elements without visible text, use CLICK_COORDS, x, y.
 - The coordinates should be according to the frame of size 1080 X 1920 and top left of the frame is 0,0
 - For screens navigated via prototype links, verify the destination screen using CHECK.
+- Make these test cases in sequence like navigate from splash to home -> home to menu -> menu to other pages => other pages to menu etc
 - Avoid extra spaces after commands.
 - Save all the test cases in a file(like testcases.txt)
 
@@ -278,9 +279,9 @@ output ::
 
 Navigate from splash to home, CLICK_COORDS, 540, 960, SLEEP, 2, CHECK, POPULAR RECIPES
 Open menu from home, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
-Navigate to popular recipes from menu, CLICK, Popular recipes, SLEEP, 2, CHECK, POPULAR RECIPES
 Navigate to saved recipes from menu, CLICK, saved recipes, SLEEP, 2, CHECK, SAVED RECIPES
+Open menu from saved screen, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
 Navigate to favorite recipes from menu, CLICK, FAVORITE RECIPES, SLEEP, 2, CHECK, FAVORITE RECIPES
 Open menu from favorite screen, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
-Open menu from saved screen, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
-
+Navigate to popular recipes from menu, CLICK, Popular recipes, SLEEP, 2, CHECK, POPULAR RECIPES
+Open menu from home final, CLICK_COORDS, 74, 83, SLEEP, 2, CHECK, Popular recipes
